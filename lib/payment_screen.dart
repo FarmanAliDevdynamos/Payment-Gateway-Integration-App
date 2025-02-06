@@ -67,11 +67,16 @@ class _PaymentScreenPageState extends State<PaymentScreenPage> {
     try {
       await Stripe.instance.presentPaymentSheet();
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Paid Successfully')),
+        SnackBar(
+          backgroundColor: Colors.green,
+          content: Text('Paid Successfully'),
+        ),
       );
     } on StripeException catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Payment Failed: ${e.error.localizedMessage}')),
+        SnackBar(
+            backgroundColor: Colors.red,
+            content: Text('Payment Failed: ${e.error.localizedMessage}')),
       );
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(

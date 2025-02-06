@@ -4,7 +4,8 @@ import 'package:payment_gateway_integration_app/payment_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized;
-  Stripe.publishableKey = 'Use your Own Public key';
+  Stripe.publishableKey =
+      'pk_test_51QpEi4FZ0h4RBRG97kFS9iRHZx3He98KMEoYs3I4HS77CRmuufcttvGvtMXsmpTOoPw15Re3y47H1gRtSmI4Eyzu005Agcll2p';
   runApp(const MyApp());
 }
 

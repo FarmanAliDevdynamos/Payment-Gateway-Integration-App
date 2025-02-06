@@ -6,12 +6,13 @@ class PaymentService {
       String amount, String currency) async {
     try {
       Map<String, String> body = {
-        'amount': ((int.parse(amount)) * 100).toString(), // Convert to cents
+        'amount': ((int.parse(amount)) * 100).toString(), 
         'currency': currency,
-        'payment_method_types[]': 'card', // ✅ Fixed issue
+        'payment_method_types[]': 'card', 
       };
 
-      var secretKey = 'Use your own Secret key';
+      var secretKey =
+          'sk_test_51QpEi4FZ0h4RBRG9DG1c3GaSBtqYbBCTikkJyIHMEr7sDjdzc7ugSJDABTClouANuRkDNnUwvnrXIhKe1eB4JKf400kqF1bu8c';
       var response = await http.post(
         Uri.parse('https://api.stripe.com/v1/payment_intents'),
         headers: {
