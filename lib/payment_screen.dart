@@ -40,7 +40,7 @@ class _PaymentScreenPageState extends State<PaymentScreenPage> {
   Future<void> makePayment() async {
     try {
       paymentIntent = await paymentService.createPaymentIntent(
-          "10", 'GBP'); // Fixed currency code
+          "20", 'GBP'); // Fixed currency code
       if (paymentIntent == null) {
         print("Failed to create Payment Intent");
         return;

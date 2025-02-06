@@ -12,7 +12,7 @@ class PaymentService {
       };
 
       var secretKey =
-          'sk_test_51QpEi4FZ0h4RBRG9DG1c3GaSBtqYbBCTikkJyIHMEr7sDjdzc7ugSJDABTClouANuRkDNnUwvnrXIhKe1eB4JKf400kqF1bu8c';
+          'Use your Own Secret key';
       var response = await http.post(
         Uri.parse('https://api.stripe.com/v1/payment_intents'),
         headers: {
